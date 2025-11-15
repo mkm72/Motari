@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:latest  
+    container_name: motarilog_db
+    ports:
+      - "27017:27017"  # maps port
+    volumes:
+      - motarilog-data:/data/db 
+    environment:
+      MONGO_INITDB_DATABASE: motarilog 
+
+volumes:
+  
+  motarilog-data:
