@@ -7,7 +7,7 @@ from datetime import datetime
 
 # --- Database Connection ---
 
-MONGO_URI = os.environ.get("MONGO_URI", "mongodb://localhost:27017/motarilog")
+MONGO_URI = os.environ.get("MONGO_URI", "mongodb://localhost:27017/motarilog") # change me
 client = MongoClient(MONGO_URI)
 
 db = client.get_database()

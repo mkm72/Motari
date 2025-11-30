@@ -4,7 +4,7 @@ from .models import initialize_database, db
 from .routes.auth import auth_bp
 from .routes.history import history_bp
 from datetime import timedelta
-
+from .routes.web import web_bp
 def create_app():
     app = Flask(__name__)
 
@@ -23,8 +23,5 @@ def create_app():
     app.register_blueprint(auth_bp, url_prefix='/api')
     app.register_blueprint(history_bp, url_prefix='/api')
 
-    @app.route('/')
-    def home():
-        return "MotariLog API is running!"
-
+    app.register_blueprint(web_bp)
     return app
