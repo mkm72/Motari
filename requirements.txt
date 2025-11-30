@@ -1,0 +1,14 @@
+bcrypt==5.0.0
+blinker==1.9.0
+cachelib==0.13.0
+click==8.3.1
+dnspython==2.8.0
+Flask==3.1.2
+Flask-Session==0.8.0
+itsdangerous==2.2.0
+Jinja2==3.1.6
+MarkupSafe==3.0.3
+marshmallow==4.1.0
+msgspec==0.20.0
+pymongo==4.15.4
+Werkzeug==3.1.3
