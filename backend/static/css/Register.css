@@ -22,7 +22,7 @@ body.register-page {
 }
 
 .register-container {
-    background: url(register.jpg) center/cover no-repeat;
+background: url("/static/img/register.jpg") center/cover no-repeat;
     background-repeat:no-repeat;
     background-position: center;
     background-attachment: fixed;
