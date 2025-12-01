@@ -1,0 +1,193 @@
+:root {
+  --white: #ffffff;
+  --muted: #6b7280;
+  --light-fill: #f5f5f7;
+  --placeholder: #8e8e93;
+  --motri-blue: #007aff;
+  --radius-card: 24px;
+  --font: "Inter", sans-serif;
+}
+
+/* PAGE */
+body.workshops-page {
+  margin: 0;
+  font-family: var(--font);
+  background: #020617;
+  overflow: hidden;
+  color: #1c1c1e;
+}
+
+/* FULL MAP BACKGROUND */
+#map-bg {
+  position: fixed;
+  inset: 0;
+  background: url(workshop.jpg);
+    background-repeat:no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: grid;
+  filter: brightness(0.7);
+  z-index: 0;
+}
+
+/* HEADER */
+.app-header {
+  position: relative;
+  z-index: 2;
+  padding: 20px 32px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.brand-logo {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 8px 18px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-ghost.small {
+  padding: 6px 16px;
+  font-size: 13px;
+}
+
+/* FLOATING CARD */
+.floating-card {
+  position: absolute;
+  left: 50%;
+  bottom: 32px;
+  transform: translateX(-50%);
+  width: 92%;
+  max-width: 480px;
+  background: rgba(255,255,255,0.94);
+  backdrop-filter: blur(12px);
+  border-radius: var(--radius-card);
+  padding: 20px 24px 28px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+  z-index: 2;
+}
+
+/* SEARCH BAR */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: var(--light-fill);
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+}
+
+.search-icon {
+  opacity: 0.5;
+  margin-right: 8px;
+}
+
+.search-bar input {
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  flex: 1;
+}
+
+.search-bar input::placeholder {
+  color: var(--placeholder);
+}
+
+/* CHIPS */
+.chip-row {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.chip {
+  background: #e5e7eb;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.chip-active {
+  background: linear-gradient(90deg, #0ac5d4, #007aff);
+  color: white;
+}
+
+/* WORKSHOP LIST */
+.list-title {
+  margin: 16px 0 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.workshop-list {
+  max-height: 220px;
+  overflow-y: auto;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.workshop-item {
+  background: white;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.workshop-item:hover {
+  transform: translateY(-3px);
+}
+
+.workshop-info h4 {
+  margin: 0 0 2px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.workshop-info .muted {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* CTA BUTTON */
+.btn-primary {
+  background: linear-gradient(90deg, #0ac5d4, #007aff);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.full {
+  width: 100%;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
