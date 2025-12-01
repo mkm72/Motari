@@ -20,8 +20,8 @@ def register():
 
 @web_bp.route('/vehicle-details')
 def vehicle_details():
-    return render_template('Vehicle-Details.html')
+    return render_template('Vehicle_Details.html')
 
 @web_bp.route('/workshops')
 def workshops():
-    return render_template('Workshops.html')
+    return render_template('Workshop.html')
