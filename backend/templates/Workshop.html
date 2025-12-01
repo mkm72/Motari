@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MotriLog – Workshops</title>
+  <link rel="stylesheet" href="Workshop.css" />
+</head>
+
+<body class="workshops-page">
+
+  <!-- Fullscreen Map Background -->
+  <div id="map-bg"></div>
+
+  <!-- Header -->
+  <header class="app-header">
+    <div class="brand-logo">MotriLog</div>
+
+    <div class="header-actions">
+      <a href="dashboard.html" class="btn-ghost small">← Back</a>
+      <button id="logout-btn" class="btn-ghost">Logout</button>
+    </div>
+  </header>
+
+  <!-- Floating Card -->
+  <div class="floating-card">
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="search-input" placeholder="Search for workshops...">
+    </div>
+
+    <!-- Chips -->
+    <div class="chip-row">
+      <button class="chip chip-active">Oil Change</button>
+      <button class="chip">Tire Services</button>
+      <button class="chip">General Service</button>
+      <button class="chip">AC Repair</button>
+    </div>
+
+    <!-- List Title -->
+    <h3 class="list-title">Nearby Workshops</h3>
+
+    <!-- Scrollable Workshop List -->
+    <ul class="workshop-list" id="workshop-list">
+      <!-- Example Items -->
+      <li class="workshop-item">
+        <div class="workshop-info">
+          <h4>AutoFix Pro</h4>
+          <p class="muted">1.2 km · ⭐ 4.7</p>
+        </div>
+      </li>
+
+      <li class="workshop-item">
+        <div class="workshop-info">
+          <h4>Speedy Garage</h4>
+          <p class="muted">2.0 km · ⭐ 4.3</p>
+        </div>
+      </li>
+
+      <li class="workshop-item">
+        <div class="workshop-info">
+          <h4>Precision Motors</h4>
+          <p class="muted">3.1 km · ⭐ 4.8</p>
+        </div>
+      </li>
+
+    </ul>
+
+    <!-- CTA -->
+    <button class="btn-primary full mt-16">
+      Get Directions
+    </button>
+
+  </div>
+
+  <!-- JS -->
+  <script src="js/auth.js"></script>
+</body>
+</html>

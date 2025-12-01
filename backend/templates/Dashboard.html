@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MotriLog – My Vehicles</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body class="dashboard-page">
+
+    <!-- Background Image -->
+    <div class="bg-image"></div>
+
+    <!-- Header -->
+    <header class="app-header">
+        <div class="brand-logo">MotriLog</div>
+        <button id="logout-btn" class="btn-ghost">Logout</button>
+    </header>
+
+    <!-- Main Layout -->
+    <main class="content">
+
+        <!-- Main Card -->
+        <section class="dashboard-card">
+
+            <!-- Header Row -->
+            <div class="card-header">
+                <h1 class="title">My Vehicles</h1>
+                <button id="add-vehicle-btn" class="btn-primary-pill">
+                    + Add Vehicle
+                </button>
+            </div>
+
+            <!-- Vehicle List (JS populates here) -->
+            <div id="vehicles-list" class="vehicles-grid">
+                <!-- Example vehicle card (will be replaced by JS) -->
+                <!--
+                <div class="vehicle-card">
+                    <img src="img/car-default.png" class="vehicle-img">
+                    <div class="vehicle-info">
+                        <h2>Nissan Altima 2019</h2>
+                        <p class="sub">Plate: XYZ-1234</p>
+                    </div>
+                </div>
+                -->
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- JS -->
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
+
+</body>
+</html>
