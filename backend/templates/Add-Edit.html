@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MotriLog – Add Vehicle</title>
+  <link rel="stylesheet" href="add-edit.css" />
+</head>
+
+<body class="add-vehicle-page">
+
+  <div class="container">
+
+    <!-- Left Image -->
+    <div class="left-panel">
+      <div class="brand-logo">MotriLog</div>
+    </div>
+
+    <!-- Right Form Card -->
+    <div class="right-panel">
+
+      <div class="form-card">
+
+        <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+
+        <h1 class="title">Add New Vehicle</h1>
+
+        <form id="add-vehicle-form" class="form-grid">
+
+          <!-- MAKE -->
+          <div class="form-group">
+            <label>Make</label>
+            <input type="text" id="vehicle-make" placeholder="e.g., Nissan" required>
+          </div>
+
+          <!-- MODEL -->
+          <div class="form-group">
+            <label>Model</label>
+            <input type="text" id="vehicle-model" placeholder="e.g., Altima" required>
+          </div>
+
+          <!-- YEAR -->
+          <div class="form-group">
+            <label>Year</label>
+            <input type="number" id="vehicle-year" placeholder="2020" required>
+          </div>
+
+          <!-- LICENSE PLATE -->
+          <div class="form-group">
+            <label>License Plate</label>
+            <input type="text" id="vehicle-plate" placeholder="ABC-1234" required>
+          </div>
+
+          <!-- VIN -->
+          <div class="form-group full">
+            <label>VIN (Vehicle Identification Number)</label>
+            <input type="text" id="vehicle-vin" placeholder="Enter full VIN" required>
+          </div>
+
+          <!-- PHOTO UPLOAD -->
+          <div class="form-group full">
+            <label>Upload Vehicle Photo (Optional)</label>
+            <input type="file" id="vehicle-photo" accept="image/*">
+          </div>
+
+          <!-- ERROR -->
+          <p id="vehicle-error" class="error-text" hidden></p>
+
+          <!-- BUTTON -->
+          <button type="submit" class="btn-primary full">SAVE VEHICLE</button>
+
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Shared Auth JS -->
+  <script src="js/auth.js"></script>
+</body>
+</html>
