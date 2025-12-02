@@ -3,53 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>MotriLog – Login</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="stylesheet" href="../static/css/login.css">
 </head>
 
 <body class="login-page">
 
     <div class="login-container">
 
-        <!-- LEFT SIDE CAR IMAGE -->
         <div class="login-left">
             <div class="brand-logo">MotriLog</div>
         </div>
 
-        <!-- RIGHT SIDE FORM CARD -->
         <div class="login-right">
             <div class="login-card">
 
                 <h1 class="title">Welcome Back</h1>
 
-                <form id="login-form">
-
-                    <!-- EMAIL -->
+                <form id="login-form" class="form">
                     <div class="form-group">
-                        <label class="input-label">Email Address</label>
-                        <input type="email" id="email" placeholder="Enter your email" required>
+                        <label class="input-label" for="login-email">Email Address</label>
+                        <input type="email" id="login-email" name="email" placeholder="Enter your email" required>
                     </div>
 
-                    <!-- PASSWORD -->
                     <div class="form-group">
-                        <label class="input-label">Password</label>
-                        <input type="password" id="password" placeholder="Enter your password" required>
+                        <label class="input-label" for="login-password">Password</label>
+                        <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
                     </div>
 
-                    <!-- ERROR MESSAGE -->
                     <p id="login-error" class="error-text" hidden></p>
 
-                    <!-- BUTTON -->
                     <button type="submit" class="btn-primary">LOG IN SECURELY</button>
                 </form>
 
-                <!-- REGISTER LINK -->
                 <p class="register-text">
                     Don’t have an account?
-                    <a href="register">Register</a>
+                    <a href="register.html">Register</a>
                 </p>
             </div>
         </div>
     </div>
 
+    <script src="../static/js/auth.js"></script>
 </body>
 </html>
