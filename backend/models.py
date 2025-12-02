@@ -59,7 +59,7 @@ class VehicleSchema(Schema):
 
 class ServiceRecordSchema(Schema):
     _id = ObjectIdField(dump_only=True)
-    vehicle_id = ObjectIdField(required=True)
+    vehicle_id = ObjectIdField(dump_only=True)
     service_type = fields.String(
         required=True,
         validate=validate.OneOf([
@@ -74,11 +74,11 @@ class ServiceRecordSchema(Schema):
     service_location = fields.String(required=False, allow_none=True)
     notes = fields.String(required=False, allow_none=True, validate=validate.Length(max=1000)) 
     created_at = fields.DateTime(dump_only=True, dump_default=datetime.utcnow)
-    created_by = ObjectIdField(required=True)
+    created_by = ObjectIdField(dump_only=True)
 
 class MaintenancePredictionSchema(Schema):
     _id = ObjectIdField(dump_only=True)
-    vehicle_id = ObjectIdField(required=True)
+    vehicle_id = ObjectIdField(dump_only=True)
     maintenance_type = fields.String(required=True) 
     predicted_date = fields.DateTime(required=True)
     predicted_mileage = fields.Integer(required=True)
@@ -97,7 +97,7 @@ class MaintenancePredictionSchema(Schema):
 
 class AccidentHistorySchema(Schema):
     _id = ObjectIdField(dump_only=True)
-    vehicle_id = ObjectIdField(required=True)
+    vehicle_id = ObjectIdField(dump_only=True)
     accident_date = fields.DateTime(required=True)
     accident_location = fields.String(required=False, allow_none=True)
     description = fields.String(required=True, validate=validate.Length(max=2000))
@@ -110,7 +110,7 @@ class AccidentHistorySchema(Schema):
         validate=validate.OneOf(["minor", "moderate", "severe", "total_loss"])
     ) 
     created_at = fields.DateTime(dump_only=True, dump_default=datetime.utcnow)
-    created_by = ObjectIdField(required=True)
+    created_by = ObjectIdField(dump_only=True)
 
 # --- Workshops ---
 
