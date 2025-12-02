@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MotriLog – Dashboard</title>
+    <link rel="stylesheet" href="../static/css/dashboard.css" />
+  </head>
+
+  <body class="dashboard-page">
+    <div class="bg-image"></div>
+
+    <header class="app-header">
+      <div class="brand-logo">MotriLog</div>
+      <button id="logout-btn" class="btn-ghost">Logout</button>
+    </header>
+
+    <main class="content">
+      <section class="dashboard-card">
+        <div class="card-header">
+          <h1 class="title">My Vehicles</h1>
+          <a href="addvehicle" class="btn-primary-pill">+ Add Vehicle</a>
+        </div>
+
+        <div id="vehicles-list" class="vehicles-grid"></div>
+      </section>
+    </main>
+
+    <script src="../static/js/auth.js"></script>
+    <script src="../static/js/dashboard.js"></script>
+  </body>
+</html>
