@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MotriLog – Vehicle Details</title>
+    <link rel="stylesheet" href="../static/css/vehicledetails.css" />
+  </head>
+
+  <body class="vehicle-page">
+    <div class="bg-image"></div>
+
+    <header class="app-header">
+      <div class="brand-logo">MotriLog</div>
+      <div class="header-actions">
+        <a href="dashboard" class="btn-ghost small">← Back</a>
+        <button id="logout-btn" class="btn-ghost">Logout</button>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="vehicle-card">
+        <div class="vehicle-top">
+          <div class="vehicle-photo">
+            <img
+              id="vehicle-img"
+              src="../static/img/car-interior.jpg"
+              alt="Vehicle"
+            />
+          </div>
+          <div class="vehicle-meta">
+            <h1 id="vehicle-title">Vehicle Name</h1>
+            <p id="vehicle-plate" class="muted">Plate</p>
+          </div>
+        </div>
+
+        <section class="section">
+          <h2>Service History</h2>
+          <div id="service-history" class="service-history"></div>
+        </section>
+
+        <section class="section">
+          <h3>Add Service Record</h3>
+          <form id="service-form" class="service-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="service-date">Date</label>
+                <input type="date" id="service-date" required />
+              </div>
+              <div class="form-group">
+                <label for="service-desc">Description</label>
+                <input
+                  type="text"
+                  id="service-desc"
+                  placeholder="Oil change, tires, etc."
+                  required
+                />
+              </div>
+            </div>
+            <p id="service-error" class="error-text" hidden></p>
+            <div class="form-actions">
+              <button type="submit" class="btn-primary">+ Add Service</button>
+            </div>
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <script src="../static/js/auth.js"></script>
+    <script src="../static/js/vehicle-details.js"></script>
+  </body>
+</html>
