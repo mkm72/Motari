@@ -18,6 +18,7 @@
           <h1 class="title">Add New Vehicle</h1>
 
           <form id="add-vehicle-form" class="form-grid">
+            <!-- Make -->
             <div class="form-group">
               <label for="vehicle-make">Make</label>
               <input
@@ -28,6 +29,7 @@
               />
             </div>
 
+            <!-- Model -->
             <div class="form-group">
               <label for="vehicle-model">Model</label>
               <input
@@ -38,6 +40,7 @@
               />
             </div>
 
+            <!-- Year -->
             <div class="form-group">
               <label for="vehicle-year">Year</label>
               <input
@@ -48,6 +51,7 @@
               />
             </div>
 
+            <!-- License Plate -->
             <div class="form-group">
               <label for="vehicle-plate">License Plate</label>
               <input
@@ -58,6 +62,29 @@
               />
             </div>
 
+            <!-- Color (NEW) -->
+            <div class="form-group">
+              <label for="vehicle-color">Color</label>
+              <input
+                type="text"
+                id="vehicle-color"
+                placeholder="e.g., Black"
+                required
+              />
+            </div>
+
+            <!-- Initial Mileage (NEW) -->
+            <div class="form-group">
+              <label for="vehicle-mileage">Initial Mileage</label>
+              <input
+                type="number"
+                id="vehicle-mileage"
+                placeholder="e.g., 120000"
+                required
+              />
+            </div>
+
+            <!-- VIN -->
             <div class="form-group full">
               <label for="vehicle-vin">VIN</label>
               <input
