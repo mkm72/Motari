@@ -10,7 +10,7 @@ Before you begin, ensure you have the following installed on your system:
 
 Clone the repository:
 ```
-git clone https://github.com/mkm72/Motari.git
+git clone --branch=develop https://github.com/mkm72/Motari.git
 cd motari
 ```
 
