@@ -53,6 +53,7 @@ class VehicleSchema(Schema):
     purchase_date = fields.DateTime(required=False, allow_none=True)
     initial_mileage = fields.Integer(required=True, validate=validate.Range(min=0))
     current_mileage = fields.Integer(required=True, validate=validate.Range(min=0))
+    image_filename = fields.String(load_default=None)
     last_mileage_update = fields.DateTime(load_default=datetime.utcnow)
     created_at = fields.DateTime(dump_only=True, dump_default=datetime.utcnow)
     is_active = fields.Boolean(load_default=True)

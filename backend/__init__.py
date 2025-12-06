@@ -1,3 +1,4 @@
+import os
 from flask import Flask
 from flask_session import Session  
 from .models import initialize_database, db 
@@ -16,6 +17,11 @@ def create_app():
     app.config["SESSION_MONGODB_DB"] = "motarilog"
     app.config["SESSION_MONGODB_COLLECT"] = "sessions"
     app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(hours=24) 
+
+    upload_folder = os.path.join(app.root_path,'static','uploads')
+    os.makedirs(upload_folder,exist_ok=True)
+    app.config['UPLOAD_FOLDER'] = upload_folder 
+
 
     # Initialize Session
     Session(app)
