@@ -1,6 +1,5 @@
 console.log("DASHBOARD.JS LOADED!");
 
-// ❗ Ensure API_BASE_URL is loaded from auth.js, NOT here
 
 async function fetch_and_display_vehicles() {
   const container = document.getElementById("vehicles-list");

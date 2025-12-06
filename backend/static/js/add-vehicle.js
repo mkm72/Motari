@@ -1,6 +1,5 @@
 console.log("ADD-VEHICLE.JS LOADED!");
 
-const API_BASE_URL = "http://127.0.0.1:5000";
 
 async function handle_add_vehicle_submit(event) {
   event.preventDefault();
