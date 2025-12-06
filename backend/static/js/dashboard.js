@@ -1,6 +1,5 @@
 console.log("DASHBOARD.JS LOADED!");
 
-
 async function fetch_and_display_vehicles() {
   const container = document.getElementById("vehicles-list");
   if (!container) return;
@@ -38,7 +37,7 @@ async function fetch_and_display_vehicles() {
           <h3>${v.manufacturer} ${v.model}</h3>
           <p>Plate: ${v.license_plate || ""}</p>
           <p>Color: ${v.color || "-"}</p>
-          <p>Mileage: ${v.current_mileage || 0}</p>
+          <p>Mileage: ${v.current_mileage ?? v.initial_mileage ?? 0}</p>
         </div>
         <button class="view-btn" data-id="${v._id}">View Details</button>
       `;
@@ -49,6 +48,8 @@ async function fetch_and_display_vehicles() {
     document.querySelectorAll(".view-btn").forEach(btn => {
       btn.addEventListener("click", () => {
         const id = btn.getAttribute("data-id");
+
+        // ✔ correct route from web.py 
         window.location.href = `/vehicle-details?id=${id}`;
       });
     });

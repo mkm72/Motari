@@ -12,7 +12,7 @@
     <header class="app-header">
       <div class="brand-logo">MotriLog</div>
       <div class="header-actions">
-        <a href="dashboard" class="btn-ghost small">← Back</a>
+        <a href="/dashboard" class="btn-ghost small">← Back</a>
         <button id="logout-btn" class="btn-ghost">Logout</button>
       </div>
     </header>
@@ -26,12 +26,27 @@
               src="../static/img/car-interior.jpg"
               alt="Vehicle"
             />
+            <input type="file" id="upload-img-input" class="upload-input" />
           </div>
+
           <div class="vehicle-meta">
             <h1 id="vehicle-title">Vehicle Name</h1>
             <p id="vehicle-plate" class="muted">Plate</p>
+
+            <div id="vehicle-details" class="vehicle-details-box">
+              Loading details...
+            </div>
+
+            <button id="delete-vehicle-btn" class="btn-danger small-btn">
+              Delete Vehicle
+            </button>
           </div>
         </div>
+
+        <section class="section">
+          <h2>Predictions</h2>
+          <div id="predictions-box" class="predictions-list"></div>
+        </section>
 
         <section class="section">
           <h2>Service History</h2>
@@ -46,17 +61,52 @@
                 <label for="service-date">Date</label>
                 <input type="date" id="service-date" required />
               </div>
+
               <div class="form-group">
-                <label for="service-desc">Description</label>
-                <input
-                  type="text"
-                  id="service-desc"
-                  placeholder="Oil change, tires, etc."
-                  required
-                />
+                <label for="service-type">Service Type</label>
+                <select id="service-type" required>
+                  <option value="oil_change">Oil Change</option>
+                  <option value="tire_rotation">Tire Rotation</option>
+                  <option value="brake_service">Brake Service</option>
+                  <option value="air_filter">Air Filter</option>
+                  <option value="battery">Battery</option>
+                  <option value="other">Other</option>
+                </select>
               </div>
             </div>
+
+            <div
+              class="form-group"
+              id="other-notes-group"
+              style="display: none"
+            >
+              <label for="service-notes">Description</label>
+              <input
+                type="text"
+                id="service-notes"
+                placeholder="Enter description…"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="mileage-options">Mileage</label>
+              <select id="mileage-options">
+                <option value="5000">+ 5000 km</option>
+                <option value="10000">+ 10000 km</option>
+                <option value="15000">+ 15000 km</option>
+                <option value="manual">Manual Entry</option>
+              </select>
+
+              <input
+                type="number"
+                id="service-mileage"
+                placeholder="Enter mileage"
+                style="display: none"
+              />
+            </div>
+
             <p id="service-error" class="error-text" hidden></p>
+
             <div class="form-actions">
               <button type="submit" class="btn-primary">+ Add Service</button>
             </div>
