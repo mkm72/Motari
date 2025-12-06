@@ -7,49 +7,45 @@
   </head>
 
   <body class="login-page">
-    <div class="login-container">
-      <div class="login-left">
-        <div class="brand-logo">MotriLog</div>
-      </div>
+    <!-- TEXT LOGO TOP-LEFT -->
+    <a href="/" class="text-logo">MotriLog</a>
 
-      <div class="login-right">
-        <div class="login-card">
-          <h1 class="title">Welcome Back</h1>
+    <!-- LOGIN CARD -->
+    <div class="login-card">
+      <h1 class="title">Welcome Back</h1>
 
-          <form id="login-form" class="form">
-            <div class="form-group">
-              <label class="input-label" for="login-email">Email Address</label>
-              <input
-                type="email"
-                id="login-email"
-                name="email"
-                placeholder="Enter your email"
-                required
-              />
-            </div>
-
-            <div class="form-group">
-              <label class="input-label" for="login-password">Password</label>
-              <input
-                type="password"
-                id="login-password"
-                name="password"
-                placeholder="Enter your password"
-                required
-              />
-            </div>
-
-            <p id="login-error" class="error-text" hidden></p>
-
-            <button type="submit" class="btn-primary">LOG IN SECURELY</button>
-          </form>
-
-          <p class="register-text">
-            Don’t have an account?
-            <a href="register">Register</a>
-          </p>
+      <form id="login-form" class="form">
+        <div class="form-group">
+          <label class="input-label" for="login-email">Email Address</label>
+          <input
+            type="email"
+            id="login-email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
         </div>
-      </div>
+
+        <div class="form-group">
+          <label class="input-label" for="login-password">Password</label>
+          <input
+            type="password"
+            id="login-password"
+            name="password"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
+
+        <p id="login-error" class="error-text" hidden></p>
+
+        <button type="submit" class="btn-primary">LOG IN SECURELY</button>
+      </form>
+
+      <p class="register-text">
+        Don’t have an account?
+        <a href="register">Register</a>
+      </p>
     </div>
 
     <script src="../static/js/auth.js"></script>
