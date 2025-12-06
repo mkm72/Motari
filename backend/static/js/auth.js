@@ -199,6 +199,7 @@ async function logout() {
 // ------------------------------------------------------------
 // EVENT LISTENERS
 // ------------------------------------------------------------
+
 document.addEventListener("DOMContentLoaded", () => {
   const loginForm = document.getElementById("login-form");
   if (loginForm) loginForm.addEventListener("submit", handle_login_submit);
@@ -213,4 +214,52 @@ document.addEventListener("DOMContentLoaded", () => {
       logout();
     });
   });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    setupPasswordToggle("reg-password", "toggle-password");
+    setupPasswordToggle("reg-password-confirm", "toggle-confirm-password");
+    setupPasswordToggle("login-password", "toggle-login-password"); 
+
+    checkNameForNumbers("first-name", "first-name-error");
+    checkNameForNumbers("last-name", "last-name-error");
+
+    const registerForm = document.getElementById("register-form");
+    if (registerForm) {
+        registerForm.addEventListener("submit", function (event) {
+            
+            const password = document.getElementById("reg-password");
+            const confirmPassword = document.getElementById("reg-password-confirm");
+            const lengthError = document.getElementById("password-length-error"); 
+            const matchError = document.getElementById("password-match-error"); 
+            const generalError = document.getElementById("register-error");
+
+            let isValid = true;
+   
+            if (password.value.length < 8) {
+                lengthError.removeAttribute("hidden");
+                password.focus();
+                isValid = false;
+            } else {
+                lengthError.setAttribute("hidden", "");
+            }
+
+            if (password.value !== confirmPassword.value) {
+                matchError.removeAttribute("hidden");
+                confirmPassword.focus();
+                isValid = false;
+            } else {
+                matchError.setAttribute("hidden", "");
+            }
+
+            if (!isValid) {
+                event.preventDefault();
+                generalError.textContent = "Please fix the errors shown above.";
+                generalError.removeAttribute("hidden");
+                return; 
+            } 
+            
+           
+        });
+    }
 });
