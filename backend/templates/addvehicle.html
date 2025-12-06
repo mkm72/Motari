@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>MotriLog – Add Vehicle</title>
-    <link rel="stylesheet" href="../static/css/addvehicle.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/addvehicle.css') }}" />
   </head>
 
   <body class="add-vehicle-page">
@@ -103,6 +103,8 @@
       </div>
     </div>
 
+    <!-- FIX: Load auth.js FIRST, then add-vehicle.js -->
+    <script src="{{ url_for('static', filename='js/auth.js') }}"></script>
     <script src="{{ url_for('static', filename='js/add-vehicle.js') }}"></script>
   </body>
 </html>
